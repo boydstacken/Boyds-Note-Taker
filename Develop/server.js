@@ -5,6 +5,7 @@ const express = require('express')
 const path = require('path')
 const fs = require('fs')
 
+//Iniitalizes variables and sets up express server
 const db = require('./db/db.json')
 const PORT = 3001;
 const app = express();
@@ -12,6 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
+//Set up for routes
 app.get('/', (req, res) => res.send('Navigate to /index or /routes'));
 
 app.get('/index', (req, res) => res.sendFile(path.join(__dirname, 'public/index.html')));
@@ -28,4 +30,5 @@ fs.writeFileSync('./db/db.json', JSON.stringify(savedNotes))
 res.status(200).json(savedNotes)
 })
 
+//Starts the server
 app.listen(PORT, () => console.log(`Note Taker listening at http://localhost:${PORT}`));
