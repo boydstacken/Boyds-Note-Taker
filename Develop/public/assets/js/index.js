@@ -1,3 +1,5 @@
+const { v4: uuidv4 } = require('uuid');
+
 let noteTitle;
 let noteText;
 let saveNoteBtn;
@@ -9,7 +11,9 @@ if (window.location.pathname === '/notes') {
   noteText = document.querySelector('.note-textarea');
   saveNoteBtn = document.querySelector('.save-note');
   newNoteBtn = document.querySelector('.new-note');
-  noteList = document.querySelectorAll('.list-container .list-group');
+  noteList = document.querySelec
+  
+  torAll('.list-container .list-group');
 }
 
 // Show an element
@@ -52,7 +56,6 @@ const deleteNote = (id) =>
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
-
   if (activeNote.id) {
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
@@ -68,6 +71,7 @@ const renderActiveNote = () => {
 
 const handleNoteSave = () => {
   const newNote = {
+    id: uuidv4(),
     title: noteTitle.value,
     text: noteText.value,
   };

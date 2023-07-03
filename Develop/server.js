@@ -18,8 +18,6 @@ app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, 'public/notes.
 
 app.get('/api/notes', (req, res) => res.json(db))
 
-const { v4: uuidv4 } =require('uuid');
-
 app.post('/api/notes', (req, res) => {
  const savedNotes = db
  const newNotes = req.body
