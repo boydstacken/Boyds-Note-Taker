@@ -1,4 +1,3 @@
-const { v4: uuidv4 } = require('uuid');
 
 let noteTitle;
 let noteText;
@@ -11,9 +10,7 @@ if (window.location.pathname === '/notes') {
   noteText = document.querySelector('.note-textarea');
   saveNoteBtn = document.querySelector('.save-note');
   newNoteBtn = document.querySelector('.new-note');
-  noteList = document.querySelec
-  
-  torAll('.list-container .list-group');
+  noteList = document.querySelectortorAll('.list-container.list-group');
 }
 
 // Show an element
@@ -71,7 +68,6 @@ const renderActiveNote = () => {
 
 const handleNoteSave = () => {
   const newNote = {
-    id: uuidv4(),
     title: noteTitle.value,
     text: noteText.value,
   };
