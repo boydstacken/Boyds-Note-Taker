@@ -7,7 +7,7 @@ const fs = require('fs')
 
 //Iniitalizes variables and sets up express server
 const db = require('./db/db.json')
-const PORT = 3001;
+const PORT = process.env.PORT || 3001
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
