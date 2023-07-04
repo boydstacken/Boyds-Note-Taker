@@ -22,6 +22,8 @@ Record the walkthrough of the user prompts in node js, jest, and store the file 
 
 ## Usage
 
+Here's a the deployed application on heroku: https://boyds-note-taker-bd99890ceea8.herokuapp.com/
+
 Install npm packages, add the server.js file include packages for application (express, fs, uuid4, etc). Import the necessary packages, create variables and set up the express server. 
 
 Then start defining routes, handling the POST request to create a new note. When a POST request to /api/notes, the route is initiated and it retreived the 'db' object & creates a new object. The 'id' of thr new note is developed using uuidv4() function from the uuid package.
@@ -46,3 +48,6 @@ n/a
 
 If you have any questions about this Professional README Generator, please contact boydstacken@icloud.com with any futher inquiries.
 
+## Application
+
+Heroku: https://boyds-note-taker-bd99890ceea8.herokuapp.com/
