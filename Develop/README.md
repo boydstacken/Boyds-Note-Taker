@@ -31,6 +31,8 @@ The req.body contains data sent with the request and is spread into the new note
 You should be able to click the "Get Started" button on the home page of the Note Taker application and that will bring you to the notes html page. On the left is where previous note titles and descriptions will be added. You should be able to add your title in the in the "title" field and add the description in the "note text" field. Then the save button icon will show in the upper right and if you click the note should post on the left side. if you clck the write icon at the top of the page you will see empty fields to enter ![Existing notes are listed in the left-hand column with empty fields on the right-hand side for the new note’s title and text.].
 
 
+![Alt text](image-1.png)
+
 ## Credits
 
 Boyd Stacken
